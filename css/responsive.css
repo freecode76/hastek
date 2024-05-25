@@ -272,7 +272,7 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
   .header {
-    padding-top: 35px;
+    padding-top: 10px;
   }
   .mean-container .mean-bar {
     margin-top: 0px;
@@ -332,6 +332,9 @@
     text-align: center !important;
     padding-bottom: 25px;
     float: inherit;
+  }
+  .logo img {
+    width: 150px;
   }
   #main_slider .carousel-control-prev,
   #main_slider .carousel-control-next {

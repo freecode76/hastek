@@ -22,28 +22,28 @@
 
 <body>
    <!-- header inner -->
-   <div class="header">
-      <div class="head_top">
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                  <div class="top-box">
-                     <ul class="sociel_link">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
-                     </ul>
-                  </div>
+   <div class="head_top">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+               <div class="top-box">
+                  <ul class="sociel_link">
+                     <li> <a href="#"><i class="bi bi-linkedin"></i></a></li>
+                     <li> <a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                     <li> <a href="#"><i class="bi bi-instagram"></i></a></li>
+                     <li> <a href="#"><i class="bi bi-google"></i></a></li>
+                  </ul>
                </div>
-               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                  <div class="top-box">
-                     <p>long established fact that a reader will be </p>
-                  </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+               <div class="top-box">
+                  <p>long established fact that a reader will be </p>
                </div>
             </div>
          </div>
       </div>
+   </div>
+   <div class="header" id="navbar_top">
       <div class="container">
          <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
@@ -59,12 +59,26 @@
                   <div class="limit-box">
                      <nav class="main-menu">
                         <ul class="menu-area-main">
-                           <li <?php if($_SERVER['SCRIPT_NAME']=="/hastek/src/index.php") { ?> class="active"
-                              <?php   }  ?>><a href="index.php">Home</a></li>
-                           <li <?php if($_SERVER['SCRIPT_NAME']=="/hastek/src/about.php") { ?> class="active"
-                              <?php   }  ?>><a href="about.php">About</a></li>
-                           <li <?php if($_SERVER['SCRIPT_NAME']=="/hastek/src/product.php") { ?> class="active"
-                              <?php   }  ?>><a href="product.php">Product</a></li>
+                           <li <?php if($_SERVER['SCRIPT_NAME']=="/src/index.php") { ?> class="active" <?php   }  ?>><a
+                                 href="index.php">Home</a></li>
+                           <li <?php if($_SERVER['SCRIPT_NAME']=="/src/about.php") { ?> class="active" <?php   }  ?>><a
+                                 href="about.php">About</a></li>
+                           <li <?php if($_SERVER['SCRIPT_NAME']=="/src/product.php") { ?> class="active" <?php   }  ?>>
+                              <a href="product.php">Product</a>
+                              <ul>
+                                 <div class="dropdown-content">
+                                    <li><a href="#" class="item-dropdown">Vibration Isolation for HVAC Systems</a></li>
+                                    <li><a href="#" class="item-dropdown">Seismic & Wind Restraint</a></li>
+                                    <li><a href="#" class="item-dropdown">Pipe Riser Isolation</a></li>
+                                 </div>
+                                 <div class="dropdown-content">
+                                    <li><a href="#" class="item-dropdown">Product</a></li>
+                                    <li><a href="#" class="item-dropdown">Spring Vibration Isolators</a></li>
+                                    <li><a href="#" class="item-dropdown">Isolation Mounts & Pads</a></li>
+                                    <li><a href="#" class="item-dropdown">Vibration Isolation Hangers</a></li>
+                                 </div>
+                              </ul>
+                           </li>
                            <li <?php if($_SERVER['SCRIPT_NAME']=="/hastek/src/contact.php") { ?> class="active"
                               <?php   }  ?>><a href="contact.php">Contact</a></li>
                            <li></li>
@@ -76,6 +90,24 @@
          </div>
       </div>
       <!-- end header inner -->
+      <script>
+      document.addEventListener("DOMContentLoaded", function() {
+         window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+               document.getElementById('navbar_top').classList.add('fixed-top');
+               document.getElementById('navbar_top').style.paddingBottom = 0 + "px";
+               navbar_height = document.querySelector('.navbar').offsetHeight;
+               document.body.style.paddingTop = navbar_height + 'px';
+
+            } else {
+               document.getElementById('navbar_top').classList.remove('fixed-top');
+               document.body.style.paddingTop = '0';
+               document.getElementById('navbar_top').style.paddingBottom = 35 + "px";
+            }
+         });
+      });
+      </script>
+      <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
