@@ -1,4 +1,4 @@
-<?php include("./data/spring-vibration-isolators.php"); ?>
+<?php include("./data/data-spring-vibration-isolators.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +71,7 @@
                     </div>
                     <div class="card-footer">
                     <i class="bi bi-file-earmark-pdf"></i>
-                        <small class="text-body-secondary">
+                        <small class="text-body-light">
                             <a href="pdf_file/<?php echo $spring_vibration_isolators["pdf"][$i] ?>" title="Download brochure " target="_blank">Download brochure</a></small>
                     </div>
                 </div>
