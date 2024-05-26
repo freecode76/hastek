@@ -9,8 +9,18 @@
 <body>
    <div class="footer">
       <div class="container">
-         <div class="row">
+         <!-- <div class="row">
             <div class="col-md-6 offset-md-3">
+            </div>
+         </div> -->
+         <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-7 col-sm-12">
+               <div class="contact">
+                  <h3>Address</h3>
+                  <span>123 Second Street Fifth Avenue,<br>
+                     Manhattan, New York<br>
+                     +987 654 3210</span>
+               </div>
                <ul class="sociel">
                   <li> <a href="#"><i class="bi bi-linkedin"></i></a></li>
                   <li> <a href="#"><i class="bi bi-whatsapp"></i></a></li>
@@ -18,17 +28,7 @@
                   <li> <a href="#"><i class="bi bi-google"></i></a></li>
                </ul>
             </div>
-         </div>
-         <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-               <div class="contact">
-                  <h3>Address</h3>
-                  <span>123 Second Street Fifth Avenue,<br>
-                     Manhattan, New York<br>
-                     +987 654 3210</span>
-               </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-lg-4 col-md-7 col-sm-12">
                <div class="contact">
                   <h3>Quick LINKS</h3>
                   <ul class="lik">
@@ -39,7 +39,7 @@
                   </ul>
                </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+            <!-- <div class="col-xl-4 col-lg-4 col-md-7 col-sm-12">
                <div class="contact">
                   <h3>PRODUCT</h3>
                   <ul class="lik">
@@ -50,9 +50,9 @@
                      <li> <a href="#">Contact us</a></li>
                   </ul>
                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center ">
-               <div class="logo"> <a href="index.html"><img src="images/logo-hastek.png" alt="logo" /></a>
+            </div> -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 d-flex  align-items-center ">
+               <div class="logo"> <a href="index.html"><img src="images/hastek-logo-white-background.jpg" alt="logo" /></a>
                </div>
             </div>
          </div>

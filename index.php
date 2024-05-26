@@ -3,138 +3,159 @@
 <html lang="en">
 
 <head>
-   <!-- basic -->
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- mobile metas -->
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-   <!-- site metas -->
-   <title>Hastek | Home</title>
-   <meta name="keywords" content>
-   <meta name="description" content>
-   <meta name="author" content>
-   <!-- AOS css -->
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <!-- bootstrap css -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-   <!-- style css -->
-   <link rel="stylesheet" href="css/style.css">
-   <!-- Responsive-->
-   <link rel="stylesheet" href="css/responsive.css">
-   <!-- fevicon -->
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
-   <!-- Scrollbar Custom CSS -->
-   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-   <!-- Tweaks for older IEs-->
-   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-      media="screen">
-   <!--[if lt IE 9]>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Hastek | Home</title>
+    <meta name="keywords" content>
+    <meta name="description" content>
+    <meta name="author" content>
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <!-- body -->
 
 <body class="main-layout">
-   <!-- loader  -->
-   <div class="loader_bg">
-      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-   </div>
-   <!-- end loader -->
-   <!-- header -->
-   <header>
-      <!-- header inner -->
-      <?php 
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <?php 
          include("./components/navbar-nav.php");
          ?>
-      <!-- end header inner -->
-   </header>
-   <!-- end header -->
-   <section class="slider_section h-100">
-      <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
+        <!-- end header inner -->
+    </header>
+    <!-- end header -->
+    <section class="slider_section h-100">
+        <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
 
-         <div class="carousel-inner">
-            <?php for ($i=0; $i < 3; $i++) { ?>
-            <div class="carousel-item <?php echo $i == 0 ? "active" : ""; ?>">
-               <img class="first-slide w-100" src="<?php echo $banner[$i] ?>" alt="First slide" data-aos="fade">
-               <div class="container">
-                  <div class="carousel-caption relative">
-                     <h1>Our <br> <strong class="black_bold">Latest
-                        </strong><br>
-                        <strong class="yellow_bold">Product </strong>
-                     </h1>
-                     <p>It is a long established fact that a r <br>
-                        eader will be distracted by the readable content
-                        of a page </p>
-                     <a href="#">see more Products</a>
-                  </div>
-               </div>
+            <div class="carousel-inner">
+                <?php for ($i=0; $i < count($banner); $i++) { ?>
+                <div class="carousel-item <?php echo $i == 0 ? "active" : ""; ?>">
+                    <img class="first-slide w-100" src="<?php echo $banner[$i] ?>" alt="First slide" data-aos="fade">
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>Our <br> <strong class="black_bold">Latest
+                                </strong><br>
+                                <strong class="yellow_bold">Product </strong>
+                            </h1>
+                            <p>It is a long established fact that a r <br>
+                                eader will be distracted by the readable content
+                                of a page </p>
+                            <a href="#">see more Products</a>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+
+
             </div>
-            <?php } ?>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                <i class="fa fa-angle-left"></i>
+            </a>
 
+        </div>
 
-         </div>
-         <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-            <i class="fa fa-angle-right"></i>
-         </a>
-         <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-            <i class="fa fa-angle-left"></i>
-         </a>
+    </section>
 
-      </div>
-
-   </section>
-
-   <!-- Lastestnews -->
-   <div class="Lastestnews blog">
-      <div class="container">
-         <div class="row">
-            <?php for($i = 0; $i < 3; $i++) { ?>
+    <!-- Lastestnews -->
+    <div class="Lastestnews blog p-3">
+        <div class="container-xl">
+        <div class="row p-3">
+            <?php 
+            for($i = 0; $i < count($product_home["image"]); $i++) { ?>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10">
-               <div class="news-box p-3">
-                  <figure><img src="<?php echo $product_home["image"][$i] ?>" alt="img" /></figure>
-                  <h3><?php echo $product_home["title"][$i] ?></h3>
-                  <span> <?php echo $product_home["details"][$i] ?> </span>
-                  <!-- <p><?php echo $product_home["desc"][$i] ?></p> -->
-               </div>
+                <div class="news-box p-1">
+                    <a href="<?php echo $product_home["page"][$i] ?>">
+                        <figure><img src="<?php echo $product_home["image"][$i] ?>" alt="img" /></figure>
+                        <h3><?php echo $product_home["title"][$i] ?></h3>
+                        <span> <?php echo $product_home["details"][$i] ?> </span>
+                        <!-- <p><?php echo $product_home["desc"][$i] ?></p> -->
+                    </a>
+                </div>
             </div>
             <?php } ?>
-         </div>
-      </div>
-   </div>
-   <!-- end Lastestnews -->
-
-   <!-- Video  -->
-   <div class="about" style="margin-bottom: 200px;">
-      <div class="container">
-         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-               <div class="ratio ratio-16x9 w-auto ">
-                  <iframe class="w-100" height="275px"
-                     src="https://www.youtube.com/embed/9qEjNogFOck?si=wBltQmovmpWwUbCB" title="YouTube video"
-                     allowfullscreen></iframe>
-               </div>
+        </div>
+        </div>
+    </div>
+    <!-- end Lastestnews -->
+    <!-- Video  -->
+    <div class="about">
+        <div class="container card-header">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="ratio ratio-16x9 w-auto ">
+                        <iframe class="w-100" height="275px"
+                            src="https://www.youtube.com/embed/9qEjNogFOck?si=wBltQmovmpWwUbCB" title="YouTube video"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="about_box">
+                        <h3>Who is HASTEK</h3>
+                        <p class="text-justify"><span>Founded in 2013, Hastek has been dedicated in TELECOM system field
+                                to perfect itself as an one-stop mechanical and fixing support systems manufacturer.
+                                Hastek factories cover a vast area in Shanghai and Wuxi respectively, with the
+                                certificates of ISO9001 and CE, Hastek pays much attention on quality control and
+                                process inspection. Owing to 100+ workers and 10 years’ experience, Hastek possesses the
+                                full capabilities and technology.
+                            </span></p>
+                    </div>
+                </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-               <div class="about_box">
-                  <h3>Who is Lighten</h3>
-                  <p>It has survived not only five centuries, but also the leap into electronic typesetting,
-                     remaining essentially unchanged. It was popularised in the 1960s with the release of
-                     Letraset sheets containing Lorem Ipsum.</p>
-                  <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                     of type and scrambled it to make a type specimen book.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- end Video -->
+        </div>
+    </div>
+    <!-- end Video -->
 
-   <!-- service -->
-   <!-- <div class="service">
+    <div class="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2>our <strong class="black">products</strong></h2>
+                        <p class="text-justify"><span>Our offered solutions are created from single products that are
+                                designed to combine
+                                together and work as effective product of seismic bracing systems. This means that when
+                                using a combination of Hastek products, you can be confident that your entire
+                                installation
+                                is strong and reliable, from anchor to clamp.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- service -->
+    <!-- <div class="service">
       <div class="container">
          <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -197,10 +218,10 @@
          </div>
       </div>
    </div> -->
-   <!-- end service -->
+    <!-- end service -->
 
-   <!-- our product -->
-   <!-- <div class="product">
+    <!-- our product -->
+    <!-- <div class="product">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
@@ -385,55 +406,55 @@
       </div>
    </div> -->
 
-   <!-- end our product -->
-   <!-- map -->
-   <!-- <div class="container-fluid padi">
+    <!-- end our product -->
+    <!-- map -->
+    <!-- <div class="container-fluid padi">
       <div class="map">
          <img src="images/mapimg.jpg" alt="img" />
       </div>
    </div> -->
-   <!-- end map -->
-   <!--  footer -->
+    <!-- end map -->
+    <!--  footer -->
 
-   <footer>
-      <?php include("./components/footer-foot.php")?>
-   </footer>
-   <!-- end footer -->
+    <footer>
+        <?php include("./components/footer-foot.php")?>
+    </footer>
+    <!-- end footer -->
 
-   <!-- Bootstrap -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-   </script>
-   <!-- AOS JS -->
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <!-- Javascript files-->
-   <script src="js/jquery.min.js"></script>
-   <script src="js/popper.min.js"></script>
-   <script src="js/bootstrap.bundle.min.js"></script>
-   <script src="js/jquery-3.0.0.min.js"></script>
-   <script src="js/plugin.js"></script>
-   <!-- sidebar -->
-   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-   <script src="js/custom.js"></script>
-   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-   <script>
-   $(document).ready(function() {
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+    $(document).ready(function() {
 
-      AOS.init();
-      $(".fancybox").fancybox({
-         openEffect: "none",
-         closeEffect: "none"
-      });
+        AOS.init();
+        $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+        });
 
-      $(".zoom").hover(function() {
+        $(".zoom").hover(function() {
 
-         $(this).addClass("transition");
-      }, function() {
+            $(this).addClass("transition");
+        }, function() {
 
-         $(this).removeClass("transition");
-      });
-   });
-   </script>
+            $(this).removeClass("transition");
+        });
+    });
+    </script>
 </body>
 
 </html>

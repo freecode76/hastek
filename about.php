@@ -67,18 +67,19 @@ include("./components/navbar-nav.php");
          <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                <div class="about_box">
-                  <figure><img src="images/pc_layout.png" /></figure>
+                  <figure><img src="images/about-map.jpg" /></figure>
                </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                <div class="about_box">
-                  <h3>Who is Lighten</h3>
-                  <p>It has survived not only five centuries, but also the leap into electronic typesetting,
-                     remaining essentially unchanged. It was popularised in the 1960s with the release of
-                     Letraset sheets containing Lorem Ipsum.</p>
-                  <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                     of type and scrambled it to make a type specimen book.</p>
+                  <h3>Seismic Bracing</h3>
+                  <p>PT. Hastek Indoraya Cipta has specialized in the design and supply of seismic bracing for plumbing,
+                     HVAC, mechanical systems, and machinery, and is proud to represent industry leader Kinetics Noise
+                     Control’s Seismic Bracing lines.</p>
+                  <p>We are regional player in the highly specialized seismic field, and our more than 5 years of
+                     experience has given us a comprehensive understanding of the various building codes and
+                     municipalities in the region that can determine seismic requirements. For all of your Seismic
+                     questions, give us a call!</p>
                </div>
             </div>
          </div>
