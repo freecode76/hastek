@@ -1,4 +1,4 @@
-<?php include("./data/spring-vibration-isolators.php"); ?>
+<?php include("./data/data-spring-vibration-isolators.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +16,7 @@
     <meta name="author" content="">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
@@ -58,27 +59,49 @@
         </div>
     </div>
     
-    <div class="Lastestnews blog p-2">
-        <div class="row row-cols-1 row-cols-md-3 g-4 p-3">
-            <?php for($i = 0; $i < count($spring_vibration_isolators["image"]); $i++) { ?>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-10 p-2">
-                <div class="card h-100 news-box">
-                    <img src="<?php echo $spring_vibration_isolators["image"][$i] ?>" alt="img" title="<?php echo $spring_vibration_isolators["title"][$i] ?>"/>
-                    <div class="card-body">
-                        <h3 class="card-title"><a href="<?php echo $spring_vibration_isolators["page"][$i] ?>"><?php echo $spring_vibration_isolators["title"][$i] ?></a>
-                        </h3>
-                        <p class="card-text"><?php echo $spring_vibration_isolators["details"][$i] ?></p>
-                    </div>
-                    <div class="card-footer">
-                    <i class="bi bi-file-earmark-pdf"></i>
-                        <small class="text-body-secondary">
-                            <a href="<?php echo $spring_vibration_isolators["pdf"][$i] ?>" title="Download brochure " target="_blank">Download brochure</a></small>
+    <div class="about">
+   <div class="container">
+      <div class="row">
+         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="about_box">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="slider-hero">
+                        <div class="featured-carousel owl-carousel">
+                            <?php for($i = 0; $i < count($free_standing_spring_isolator["title"]["image"]); $i++) { ?>
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-center justify-content-center"
+                                        style="background-image: url(<?php echo $free_standing_spring_isolator["title"]["image"][$i] ?>);">
+                                        <!-- <div class="text text-center">
+                                            <h2>Discover New Places</h2>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <div class="my-5 text-center">
+                            <ul class="thumbnail">
+                            <?php for($i = 0; $i < count($free_standing_spring_isolator["title"]["image"]); $i++) { ?>
+                                <li ><a href="#"><img src="<?php echo $free_standing_spring_isolator["title"]["image"][$i] ?>" alt="Image" class="img-fluid"></a></li>
+                                <?php } ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <?php } ?>
-        </div>
-    </div>
+            </div>
+         </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="about_box">
+               <h3>Who is Lighten</h3>
+               <?php echo $free_standing_spring_isolator["details"][0] ?>
+            </div>
+         </div> 
+      </div>
+   </div>
+</div>
 
     <!-- Video  -->
     <div class="about">
@@ -119,6 +142,8 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/plugin.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
