@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>lighten</title>
+   <title>Hastek | Contact</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -42,19 +42,22 @@
    <!-- header -->
    <header>
       <!-- header inner -->
-      <?php 
-         include("./components/navbar-nav.php");
-         ?>
+      <?php
+      include("./components/navbar-nav.php");
+      ?>
       <!-- end header inner -->
    </header>
    <!-- end header -->
    <div class="brand_color">
       <div class="container">
-         <div class="row">
-            <div class="col-md-12">
+         <div class="col-md-12">
+            <div class="titleparent">
                <div class="titlepage">
                   <h2>Contact Us</h2>
                </div>
+               <!-- <div class="titlecount">
+                  <h3>Home / <span>Contact Us</span></h3>
+               </div> -->
             </div>
          </div>
       </div>
@@ -93,7 +96,7 @@
    <!-- end contact -->
    <!--  footer -->
    <footer>
-      <?php include("./components/footer-foot.php")?>
+      <?php include("./components/footer-foot.php") ?>
    </footer>
    <!-- end footer -->
    <!-- Javascript files-->

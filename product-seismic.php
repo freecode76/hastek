@@ -1,4 +1,7 @@
-<?php include("./data/about.php") ?>
+<?php
+include("./data/table.php");
+include("./data/data-seismic.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +13,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Hastek | About</title>
+   <title>Hastek | Seismic</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -50,122 +53,63 @@
    <!-- end header -->
    <div class="brand_color">
       <div class="container">
-         <div class="col-md-12">
-            <div class="titleparent">
+         <div class="row">
+            <div class="col-md-12">
                <div class="titlepage">
-                  <h2>About</h2>
+                  <h2>Vibration Isolation for HVAC Systems</h2>
                </div>
-               <!-- <div class="titlecount">
-                  <h3>Home / <span>About</span></h3>
-               </div> -->
             </div>
          </div>
       </div>
 
    </div>
 
-
-   <div class="about">
-      <div class="container gap-5">
-         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-               <div class="about_box">
-                  <figure class="d-flex justify-content-center align-items-center"><img style="width: 400px;" src="images/about.png" />
-                  </figure>
+   <div class="Lastestnews blog p-0">
+      <!-- <div class="container"> -->
+      <div class="row p-3">
+         <?php
+         for ($i = 0; $i < count($product_home["image"]); $i++) { ?>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10">
+               <div class="news-box p-1">
+                  <a href="<?php echo $product_home["page"][$i] ?>">
+                     <figure><img src="<?php echo $product_home["image"][$i] ?>" alt="img" /></figure>
+                     <h3><?php echo $product_home["title"][$i] ?></h3>
+                     <span> <?php echo $product_home["details"][$i] ?> </span>
+                     <!-- <p><?php echo $product_home["desc"][$i] ?></p> -->
+                  </a>
                </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-               <div class="about_box">
-                  <h3><?php echo $hastekindonesia["title"] ?></h3>
-                  <?php for ($i = 0; $i < count($hastekindonesia["desc"]); $i++) { ?>
-                     <p class="text-justify"><?php echo $hastekindonesia["desc"][$i] ?></p>
-                  <?php } ?>
-               </div>
-            </div>
-         </div>
+         <?php } ?>
       </div>
+      <!-- </div> -->
    </div>
 
-   <!-- CHOOSE  -->
-   <!-- <div class="whyschose">
-      <div class="container">
+   <!-- Product Item -->
+   <div class="Lastestnews blog p-0">
+      <?php for ($i = 0; $i < count($seismic_page["data"]); $i++) { ?>
+         <div class="container">
+            <h3 class="text-justify"><?php echo $seismic_page["data"][$i]["title"][0] ?></h3>
+            <hr style="border: 0; height: 1px; background: #666; background-image: linear-gradient(to right, #f6f6f6, #666, #f6f6f6);">
+            <div class="row p-3">
+               <?php for ($j = 0; $j < count($seismic_page["data"][$i]["title"]["title_item"]); $j++) { ?>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                     <div class="news-box p-1" style="height: 400px;">
+                        <a href="<?php echo $seismic_page["data"][$i]["title"]["page"][$j]
+                                 ?>">
 
-         <div class="row">
-            <div class="col-md-7 offset-md-3">
-               <div class="title">
-                  <h2>Why <strong class="black">choose us</strong></h2>
-                  <span>Fastest repair service with best price!</span>
-               </div>
+                           <figure><img src="<?php echo $seismic_page["data"][$j]["title"]["image"][$j] ?>" alt="img" />
+                           </figure>
+                           <h3><?php echo $seismic_page["data"][$i]["title"]["title_item"][$j] ?></h3>
+                           <p><?php echo $seismic_page["data"][$i]["title"]["details"][$j] ?></p>
+                        </a>
+                     </div>
+                  </div>
+               <?php } ?>
             </div>
          </div>
-      </div>
+      <?php } ?>
    </div>
-   <div class="choose_bg">
-      <div class="container">
-         <div class="white_bg">
-            <div class="row">
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="for_box">
-                     <i><img src="icon/1.png" /></i>
-                     <h3>Data recovery</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="for_box">
-                     <i><img src="icon/2.png" /></i>
-                     <h3>Computer repair</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="for_box">
-                     <i><img src="icon/3.png" /></i>
-                     <h3>Mobile service</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="for_box">
-                     <i><img src="icon/4.png" /></i>
-                     <h3>Network solutions</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
-                  </div>
-               </div>
-               <div class="col-md-12">
-                  <a class="read-more">Read More</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div> -->
-   <!-- end CHOOSE -->
-
-   <!-- service -->
-   <div class="service">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-8 offset-md-2">
-               <div class="title">
-                  <h2><strong class="black">Why </strong>choose us</h2>
-                  <span>Easy and effective way to get your device repaired.</span>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <?php for ($i = 0; $i < count($whychooseus["title"]); $i++) { ?>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <img src="<?php echo $whychooseus["image"][$i] ?>" />
-                     <h3><?php echo $whychooseus["title"][$i] ?></h3>
-                     <p class="text-justify"><?php echo $whychooseus["desc"][$i] ?></p>
-                  </div>
-               </div>
-            <?php } ?>
-         </div>
-      </div>
-   </div>
-   <!-- end service -->
+   <!-- End Product Item -->
 
    <!-- Video  -->
    <div class="about card-header" style="padding-top: 70px;">
@@ -212,6 +156,37 @@
       </div>
    </div>
 
+   <!-- service -->
+   <!-- <div class="service"> -->
+   <!-- <div class="container"> -->
+   <!-- <div class="row">
+         <div class="col-md-8 offset-md-2">
+            <div class="title">
+               <h2>BROCHURE <strong class="black">download</strong></h2>
+               <span>Easy and effective way to get your device repaired.</span>
+            </div>
+         </div>
+      </div>
+      <div class="row"> -->
+
+   <?php
+   // var_dump(count($vibration_isolation_brochure["filename"]));die();
+   //for ($i = 0; $i < count($vibration_isolation_brochure["filename"]); $i++) { 
+   ?>
+   <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+               <div class="service-box">
+                  <i><img src="icon/pdf-icon-nobg.png" /></i> -->
+   <!-- <h2><a href="pdf_file/<?php // echo $vibration_isolation_brochure["filename"][$i] 
+                              ?>" target="_blank"><?php // echo $vibration_isolation_brochure["filename"][$i] 
+                                                   ?></a></h2> -->
+   <!-- </div>
+            </div> -->
+   <?php // } 
+   ?>
+   </div>
+   <!-- </div> -->
+   </div>
+   <!-- end service -->
 
 
    <!--  footer -->
